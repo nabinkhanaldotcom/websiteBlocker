@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Blocker</title>
+
+  <style>
+    body {
+      width: 330px;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+    }
+
+    button {
+      padding: 9px 12px;
+      cursor: pointer;
+    }
+
+    .add-button {
+      width: 100%;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin: 10px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .remove-button {
+      margin-left: 8px;
+    }
+
+    #message {
+      color: #b42318;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Website Blocker</h2>
+
+  <div class="section">
+    <h3>Block Entire Website</h3>
+
+    <input
+      type="text"
+      id="websiteInput"
+      placeholder="www.youtube.com"
+    >
+
+    <button class="add-button" id="blockWebsiteBtn">
+      Block Website
+    </button>
+  </div>
+
+  <hr>
+
+  <div class="section">
+    <h3>Block Specific Page</h3>
+
+    <input
+      type="text"
+      id="pageInput"
+      placeholder="www.example.com/about"
+    >
+
+    <button class="add-button" id="blockPageBtn">
+      Block Page
+    </button>
+  </div>
+
+  <p id="message" role="status"></p>
+
+  <hr>
+
+  <h3>Blocked List</h3>
+  <ul id="blockedList"></ul>
+
+  <script src="popup.js"></script>
+</body>
+</html>
